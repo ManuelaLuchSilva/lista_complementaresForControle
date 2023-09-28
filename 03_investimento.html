@@ -9,11 +9,27 @@
     */
 
     //ENTRADA
-
+    let quant = 100
+    let porc = 1.018
+    let mes24 = 0
+    let mes48 = 0
+    let mes96 = 0
     
     //PROCESSAMENTO
-    
+    for (let meses=0; meses<=96; meses++){
+        quant = quant*porc
+        if(meses==24){
+            mes24 = quant
+        }
+        else if(meses==48){
+            mes48 = quant
+        }
+        else if(meses==96){
+            mes96 = quant
+        }
+    }
     
     //SAÍDA
+    alert(`No final de 24 meses: ${mes24.toFixed(2).replace(".",",")}\nNo final de 48 meses: ${mes48.toFixed(2).replace(".",",")}\n No final de 96 meses: ${mes96.toFixed(2).replace(".",",")}`)
     
 </script>

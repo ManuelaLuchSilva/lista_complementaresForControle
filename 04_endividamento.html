@@ -8,12 +8,18 @@
     */
 
     //ENTRADA
-
+    let quant = 10000
+    let rend = 1.03
+    let divida = 300
+    let meses = 0
     
     //PROCESSAMENTO
-    
+    for (let contador = 1; quant>0; contador++){
+        quant = (quant-divida)*rend
+        meses++
+    }
     
     //SAÍDA
-    
+    alert(`Depois de ${meses} meses, a pessoa terá gasto todo o seu valor investido`)
 
 </script>

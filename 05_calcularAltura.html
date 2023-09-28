@@ -9,12 +9,16 @@
     */
 
     //ENTRADA
-
+    const quant = Number(prompt("Quantas pessoas tem?"))
+    let alturas = []
     
     //PROCESSAMENTO
-    
+    for (let contador=1; contador<=quant; contador++){
+        const altura = prompt("Qual sua altura?").replace(",",".")
+        alturas.push(altura)
+    }
     
     //SAÍDA
-    
+    alert(`A menor altura: ${alturas.sort((a, b) => a-b)[0].replace(".",",")} \nA maior altura: ${alturas.sort((a, b) => b-a)[0].replace(".",",")}`)
 
 </script>

@@ -10,12 +10,35 @@
     */
 
     //ENTRADA
-
+    const quantFilme = Number(prompt("Quantos filmes deseja cadastrar?"))
+    let comedia = [];
+    let romance = [];
+    let drama = [];
     
     //PROCESSAMENTO
-    
+    for (let contador = 1; contador <= quantFilme; contador++){
+        let filme = prompt(`Qual o nome do filme ${contador}`)
+        let genero = prompt(`Qual o gênero do filme ${filme}?\ncomédia-1||romance-2||drama-3`)
+        if(genero==1){
+            comedia.push(filme)
+        }
+        else if(genero==2){
+            romance.push(filme)
+        }
+        else if(genero==3){
+            drama.push(filme)
+        }
+    }
     
     //SAÍDA
-    
+    if(comedia.length!=0){
+        document.write(`Comédia:<br>${comedia.join(", ")}<br><br>`)
+    }
+    if(romance.length!=0){
+        document.write(`Romance:<br>${romance.join(", ")}<br><br>`)
+    }
+    if(drama.length!=0){
+        document.write(`Drama:<br>${drama.join(", ")}`)
+    }
     
 </script>
