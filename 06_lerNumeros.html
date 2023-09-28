@@ -9,12 +9,24 @@
     */
 
     //ENTRADA
-
+    let listaDeNumeros = [4, 8, 12, 35, 78, 83, 5, 22, 49, 95];
+    let numInf50 = [];
+    let numSup50 = [];
     
     //PROCESSAMENTO
-    
+    for (let contador = 0; contador < listaDeNumeros.length; contador++) {
+        if(listaDeNumeros[contador]<50){
+            numInf50.push(listaDeNumeros[contador]);
+        }
+        else if(listaDeNumeros[contador]>50){
+            numSup50.push(listaDeNumeros[contador]);
+        }
+    }
+    let percInf50 = numInf50.length*100/listaDeNumeros.length
+    let percSup50 = numSup50.length*100/listaDeNumeros.length
     
     //SAÍDA
-    
+    document.write(`Números maiores que 50:<ul><li>${numSup50.join("</li><li>")}</li></ul> Pencentual: ${percSup50}% <br><br>
+    Números menores que 50:<ul><li>${numInf50.join("</li><li>")}</li></ul> Percentual: ${percInf50}% `)
 
 </script>
