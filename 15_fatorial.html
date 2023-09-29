@@ -8,12 +8,22 @@
     */
 
     //ENTRADA
-
+    const num = Number(prompt("Informe um número inteiro e positivo"))
+    let fator = num
     
     //PROCESSAMENTO
-    
+    if (num >= 0 && num%1==0){
+        for (let contador = num - 1; contador>=1; contador = contador-1){
+            fator = fator*contador
+        }
+    } 
     
     //SAÍDA
-    
+    if (num >= 0 && num%1==0){
+        alert(`!${num} = ${fator}`)
+    }
+    else{
+        alert(`Valor invalido!!\nInsira um valor inteiro e positivo`)
+    }
 
 </script>

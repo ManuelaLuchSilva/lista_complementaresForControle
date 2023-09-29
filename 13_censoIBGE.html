@@ -13,12 +13,25 @@
     */
 
     //ENTRADA
+    let salarios = [1200, 2500, 3000, 9000, 850, 4000, 1500, 2300, 3800, 1600];
+    let numeroDeFilhos = [1, 2, 2, 1, 3, 2, 3, 3, 0, 4];
+    let mediaSalario = 0
+    let mediaFilhos = 0
+    let familySalario = 0
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let contador = 0; contador < numeroDeFilhos.length && contador < salarios.length; contador++) {
+        mediaFilhos = mediaFilhos + numeroDeFilhos[contador];
+        mediaSalario = mediaSalario + salarios[contador];
+        if(salarios[contador]<=3000){
+            familySalario= familySalario+1
+        }
+    }
+    mediaSalario = mediaSalario/salarios.length
+    mediaFilhos = Math.floor(mediaFilhos/numeroDeFilhos.length)
+    familySalario = familySalario*100/salarios.length
+
     //SAÍDA
-    
+    document.write(`Média de salário das famílias: ${mediaSalario} <br>Média do número de filhos: ${mediaFilhos} <br>Maior salário: ${salarios.sort((a, b) => (b - a))[0]} <br>Percentual de famílias com salário até R$ 3.000,00: ${familySalario}%`)
 
 </script>

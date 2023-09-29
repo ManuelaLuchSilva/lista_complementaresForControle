@@ -8,12 +8,22 @@
     */
 
     //ENTRADA
-
+    let n = parseInt(prompt("Informe um número"));
+    let S = 0;
+    let array = [];
+    let soma = 0
     
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+        //PROCESSAMENTO
+    if (n >= 0) {
+        for (let contador = 2; contador <= n; contador++) {
+            S = 1 + 1/contador
+            array.push(S)
+            soma = soma+S
+        }
+    }
+        
+        //SAÍDA
+    document.write(`Valores: <br>${array.join(", ")}
+    <br><br>Soma: <br>${soma}`)
 
 </script>
