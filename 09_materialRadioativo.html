@@ -8,12 +8,20 @@
     */
 
     //ENTRADA
+    let massa = Number(prompt("Qual a massa inicial do material?").replace(",","."))
+    let massaInicial = massa
+    let minutos = 0
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let contador = 0; massa >= 1; contador++) {
+        massa = massa / 2
+        minutos++
+    }
+
     //SAÍDA
-    
+    let horas = Math.floor(minutos/60)
+    minutos = minutos % 60
+
+    alert(`Massa inicial: ${massaInicial}\nMassa final: ${massa}\nTempo necessario: ${horas}H:${minutos}min`)
 
 </script>

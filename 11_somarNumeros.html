@@ -7,15 +7,20 @@
     */
 
     //ENTRADA
-
-
-    //ENTRADA
-
+    let somaImpar = 0
+    let somaPar = 0
     
     //PROCESSAMENTO
-    
+    for (let contador = 1; contador<=100; contador++) {
+        if(contador%2==0){
+            somaPar = somaPar + contador
+        }
+        else{
+            somaImpar = somaImpar + contador
+        }
+    }
     
     //SAÍDA
-    
+    alert(`Soma dos números impares: ${somaImpar} \nSoma dos números pares: ${somaPar}`)
 
 </script>

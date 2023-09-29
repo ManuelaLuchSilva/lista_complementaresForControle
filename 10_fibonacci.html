@@ -9,12 +9,19 @@
     */
 
     //ENTRADA
-
+    let fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+    const quant = Number(prompt(`Quantos números deseja adicionar na sequência:\n${fibonacci}`))
     
     //PROCESSAMENTO
-    
+    for (let contador=1; contador<=quant; contador++) {
+        alert(fibonacci)
+        const add = prompt("Qual número que adicionar?")
+        if(!isNaN(add)) {
+            fibonacci.push(add)
+        }
+    }
     
     //SAÍDA
-    
+    alert(`A lista atual é:\n${fibonacci.join(", ")}`)
 
 </script>
