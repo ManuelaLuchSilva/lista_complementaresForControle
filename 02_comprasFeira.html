@@ -17,13 +17,34 @@
 
     //ENTRADA
     let itens = ["tomate", "batata", "batata-doce", "alface", "cebola", "cebolinha", "beterraba"];
-
+    let preco = 0
+    let item = 0
     
     //PROCESSAMENTO
     for (let contador = 0; contador < itens.length; contador++){
-        const quant = prompt(`Quantos kg foram vendidos de ${itens[contador]}?`)
+        if (contador == 3 || contador == 5){
+            item = parseInt(prompt(`Digite quantas unidades de ${itens[contador]} foram vendidos: `))
+       } else {
+            item = Number(prompt(`Digite quantos quilos de ${itens[contador]} foram vendidos: `))
+       }
+        if (contador == 0){
+            preco += item * 3.90
+        } else if (contador == 1){
+            preco += item * 3.40
+        } else if (contador == 2){
+            preco += item * 4.70
+        } else if (contador == 3){
+            preco += item * 1.50
+        } else if (contador == 4){
+            preco += item * 2.90
+        } else if (contador == 5){
+            preco += item * 1.40
+        } else if (contador == 6){
+            preco += item * 4.10
+        }
     }
     
     //SAÍDA
+    alert(`O preço total foi de R$${preco.toFixed(2).replace(".",",")}`)
     
 </script>

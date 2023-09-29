@@ -10,11 +10,17 @@
 
     //ENTRADA
     let notasProgramacaoI = [4, 3, 5, 10, 9, 2, 7, 10, 8, 7, 6, 1, 5, 2, 3];
-    
+    let soma = 0
+
     //PROCESSAMENTO
-    
-    
+    for (let contador = 0; contador < notasProgramacaoI.length; contador++) {
+        soma = soma + notasProgramacaoI[contador]
+    }
+    let media = soma / notasProgramacaoI.length
+    let notaMaior = notasProgramacaoI.sort((a, b) => (b - a))[0]
+    let notaMenor = notasProgramacaoI.sort((a, b) => (a - b))[0]
+
     //SAÍDA
-    
+    alert(`Maior nota: ${notaMaior} \nMenor nota: ${notaMenor} \nMédia da turma: ${media.toFixed(1).replace(".",",")}`)
 
 </script>
