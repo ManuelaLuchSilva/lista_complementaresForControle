@@ -7,17 +7,33 @@
     Apresente, ao fim do programa, os seguintes dados:
     - Total de compras à vista
     - Total de compras parceladas
-    - Total das compras efetuadas
     - O valor da primeira prestação das compras a prazo, considerando que serão pagas em três vezes.
     */
 
     //ENTRADA
-
+    let aVista = 0
+    let comprasV = 0
+    let parcelado = 0
+    let comprasP = 0
+    let total = 0
     
     //PROCESSAMENTO
-    
+    for (let contador = 1; contador <=10; contador++) {
+        let valor = Number(prompt(`Qual o valor da transação ${contador}?`).replace(",","."))
+        let tipo = prompt(`Tipo de transação da compra ${contador}?\n(V = à vista||P = parcelado)`).toUpperCase().trim();
+        if(tipo=="V"){
+            aVista = aVista+valor
+            comprasV = comprasV+1
+        }
+        else if(tipo=="P"){
+            parcelado = parcelado+valor
+            comprasP = comprasP+1
+        }
+    }
     
     //SAÍDA
-    
+    document.write(`Total de compras à vista: ${comprasV}; Valor de R$${aVista.toFixed(2).replace(".",",")}<br>
+    Total de compras parceladas: ${comprasP}; Valor de R$${parcelado.toFixed(2).replace(".",",")}<br>
+    O valor da primeira prestação das compras a prazo: ${(parcelado/3).toFixed(2).replace(".",",")}`)
 
 </script>

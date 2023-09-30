@@ -14,12 +14,17 @@
     */
 
     //ENTRADA
-
+    let tabuada = Number(prompt("Qual tabuada deseja?"))
+    let inicio = Number(prompt("Número inicial:"))
+    let final = Number(prompt("Número final:"))
+    let resultado = []
     
     //PROCESSAMENTO
-    
+    for( let contador = inicio; contador <= final; contador++ ){
+        resultado.push(`${tabuada} * ${contador} = `+tabuada*contador)
+    }
     
     //SAÍDA
-    
+    document.write(resultado.join("<br>"))
 
 </script>

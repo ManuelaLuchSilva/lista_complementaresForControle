@@ -10,12 +10,32 @@
     */
 
     //ENTRADA
-
+    let idadeTotal = 0
+    let quantPessoas = 0
+    let mulheres = 0
+    let quanMulheres = 0    
+    let homens = 0
+    let quanHomens = 0
     
     //PROCESSAMENTO
-    
+    for (let pessoa = 1; pessoa <= 10; pessoa++) {
+        let gender = prompt("Qual seu gênero?(F-feminino||M-masculino)?").toUpperCase().trim()
+        let idade = Number(prompt("Qual sua idade?"))
+        if(gender=="F"){
+            quanMulheres = quanMulheres + 1
+            mulheres = mulheres+idade
+        }
+        else if (gender=="M"){
+            quanHomens = quanHomens + 1
+            homens = homens+idade
+        }
+        idadeTotal = idadeTotal+idade
+        quantPessoas = quantPessoas+1
+    }
     
     //SAÍDA
-    
+    document.write(`A média das idades das ${quantPessoas} pessoas: ${Math.ceil(idadeTotal/quantPessoas)}<br>
+    A idade média das mulheres: ${Math.ceil(mulheres/quanMulheres)}<br>
+    A idade média dos homens: ${Math.ceil(homens/quanHomens)}`)
 
 </script>

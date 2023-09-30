@@ -12,12 +12,33 @@
     */
 
     //ENTRADA
-
+    const quant = Number(prompt("Quantos espectadores irão avaliar?"))
+    let idade = 0
+    let idadeBom = 0
+    let bom = 0
+    let idadeRegular = 0
+    let regular = 0
     
     //PROCESSAMENTO
-    
+    for (let contador = 1; contador <= quant; contador++) {
+        let anos = Number(prompt("Qual sua idade?"))
+        let avaliação = prompt("Qual sua avaliação sobre o filme?\n(R-REGULAR || B-BOM)").toUpperCase().trim()
+        if(avaliação=="R"){
+            regular++;
+            idadeRegular = idadeRegular + anos
+        }
+        else if(avaliação=="B"){
+            bom++
+            idadeBom = idadeBom + anos
+        }
+        idade = idade + anos
+    }
     
     //SAÍDA
-    
+    document.write(`A média de idade das pessoas que responderam que o filme era REGULAR: ${Math.ceil(idadeRegular/regular)} anos<br>
+    A média de idade das pessoas que responderam que o filme era BOM: ${Math.ceil(idadeBom/bom)} anos<br>
+    A média de idade de todas as pessoas que assistiram ao filme: ${Math.ceil(idade/quant)} anos<br>
+    O percentual de pessoas que classificou o filme como REGULAR: ${(regular*100/quant).toFixed(1)}%<br>
+    O percentual de pessoas que classificou o filme como BOM: ${(bom*100/quant).toFixed(1)}%`)
 
 </script>
