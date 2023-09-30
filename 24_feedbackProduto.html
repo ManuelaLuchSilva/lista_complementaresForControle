@@ -12,16 +12,38 @@
     */
 
     //ENTRADA
-
+    let mulheresSim = 0;
+    let homensNao = 0;
+    let homens = 0;
+    let sim = 0;
+    let nao = 0;
 
     //PROCESSAMENTO
-    //ENTRADA
+    for (let contador = 0; contador < 10; contador++) {
+        let avaliaçao = prompt("Atendeu suas expectativas? (S-Sim || N-Não)").toUpperCase();
+        let genero = prompt("Qual seu gênero. (M-Masculino||F-Feminino)").toUpperCase();
+        if (avaliaçao == "S") {
+            sim = sim + 1;
+            if (genero == "M") {
+                homens = homens + 1;
+            }
+            else {
+                mulheresSim = mulheresSim + 1;
+            }
+        }
+        else {
+            nao = nao + 1;
+            if (genero === "M") {
+                homensNao = homensNao + 1;
+                homens = homens + 1;
+            }
+        }
+    }
 
-    
-    //PROCESSAMENTO
-    
-    
     //SAÍDA
-    
+    document.write(`Número de pessoas que respondeu sim: ${sim} <br>
+    Número de pessoas que respondeu não: ${nao} <br>
+    Número de mulheres que respondeu sim: ${mulheresSim} <br>
+    Percentual de homens que responderam não entre todos os homens analisados: ${homensNao * 100 / homens}%`);
 
 </script>
