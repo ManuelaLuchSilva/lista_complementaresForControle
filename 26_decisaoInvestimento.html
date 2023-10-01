@@ -10,12 +10,21 @@
     */
 
     //ENTRADA
+    let valorInvestir = Number(prompt("Quanto deseja investir?").replace(",","."));
+    let poupanca = 0;
+    let poupanacaP = 0;
+    let fundosRendaFixa = 0;
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let contador = 0; contador <= 36; contador++) {
+        poupanca = valorInvestir * 1.015;
+        poupanacaP = valorInvestir * 1.02;
+        fundosRendaFixa = valorInvestir * 1.04;
+    }
+
     //SAÍDA
-    
+    document.write(`Poupanca: R$:${Math.floor(poupanca)}; <br>
+    Poupanca plus: R$:${Math.floor(poupanacaP)}; <br>
+    Fundos de renda fixa: R$:${Math.floor(fundosRendaFixa)}.`);
 
 </script>

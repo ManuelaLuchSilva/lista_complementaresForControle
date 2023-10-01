@@ -8,12 +8,18 @@
     */
 
     //ENTRADA
-
+    let joaozinho = 1.50
+    let zezinho = 1.30
+    let anosNecessarios = 0
     
     //PROCESSAMENTO
-    
+    for (let anos = 0; zezinho<=joaozinho; anos++) {
+        joaozinho = joaozinho+0.02
+        zezinho = zezinho+0.03
+        anosNecessarios = anosNecessarios+1
+    }
     
     //SAÍDA
-    
+    alert(`${anosNecessarios} anos serão necessários para que Zezinho alcance a altura de Joãozinho.`)
 
 </script>

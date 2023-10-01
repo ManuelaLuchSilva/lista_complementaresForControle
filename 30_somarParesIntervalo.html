@@ -12,12 +12,32 @@
     */
 
     //ENTRADA
+    let inicio = Number(prompt("Número inicial:"))
+    let final = Number(prompt("Número final:"))
+    let nums = []
+    let soma = 0
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let contador = inicio; contador <= final; contador++) {
+        if (contador % 2 == 0) {
+            nums.push(contador)
+            soma = soma+contador
+        }
+    }
+
     //SAÍDA
+    if(inicio<final){
+        document.write(`Limite inferior: ${inicio}
+    <br>Limite superior: ${final}
+    <br>Saída: ${nums.join(", ")}
+    <br>Soma: ${soma}`)
+    }
+    else if(isNaN(inicio)||isNaN(final)){
+        alert("Coloque apenas números!")
+    }
+    else{
+        alert("Número inicial tem que ser menor/diferente do que o número final!!")
+    }
     
 
 </script>

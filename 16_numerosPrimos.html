@@ -8,12 +8,23 @@
     */
 
     //ENTRADA
-
+    const quant = Number(prompt("Quantos números primos você deseja descobrir?"))
+    let numPrimos = []
     
     //PROCESSAMENTO
-    
+    for (let num=2; numPrimos.length<=quant; num++){
+        let divisor = 0
+        for (let contador = 1; contador <= num; contador++) {
+            if (num % contador == 0) {
+                divisor ++;
+            }
+        }
+        if (divisor == 2) {
+            numPrimos.push(num);
+        }
+    }
     
     //SAÍDA
-    
+    alert(`Aqui temos ${quant} números primos:\n${numPrimos.join(", ")}`)
 
 </script>

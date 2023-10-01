@@ -6,12 +6,20 @@
     */
 
     //ENTRADA
-
+    let divisor = 0
+    let quintoNum = 0
     
     //PROCESSAMENTO
-    
+    for (let contador=1000; divisor<=5; contador++){
+        if (contador%11==5){
+            divisor = divisor + 1
+            if(divisor == 5){
+                quintoNum = contador
+            }
+        }
+    }
     
     //SAÍDA
-    
+    alert(`O quinto número maior que 1000, cuja divisão por 11 tenha resto 5:\n${quintoNum}`)
 
 </script>
