@@ -10,12 +10,34 @@
     */
 
     //ENTRADA
+    let peso25 = 0
+    let p25 = 0
+    let peso50 = 0
+    let p50 = 0
+    let p = 0
+    let media = 0
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let contador = 1; contador <= 10; contador++) {
+        let idade = Number(prompt("Qual sua idade?"))
+        let peso = Number(prompt("Qual seu peso?").replace(",", "."))
+        if (peso > 25) {
+            peso25 = peso25 + peso
+            p25++
+        }
+        else if (peso > 50) {
+            peso50 = peso50 + peso
+            p50++
+        }
+        p = p + peso
+        if (contador == 10) {
+            media = p / 10
+        }
+    }
+
     //SAÍDA
-    
+    document.write(`Média do peso das pessoas que possuem mais de 50 anos: ${Math.ceil(peso50 / p50)}<br>
+    Média do peso das pessoas que possuem menos de 25 anos: ${Math.ceil(peso25 / p25).toFixed(1)}<br>
+    Média do peso de todas as pessoas: ${media.toFixed(1)}`)
 
 </script>
