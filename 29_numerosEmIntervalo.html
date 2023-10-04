@@ -8,6 +8,21 @@
 
     //ENTRADA
 
+    let lista = []
+    let quant = 0
+    //PROCESSAMENTO
+    for (let contador = 1; contador <= 10; contador++) {
+        let num = Number(prompt('Informe um numero imediatamente'))
+        if (num >= 100 && num <= 200) {
+            lista.push(num)
+            quant++
+        }
+    }
+
+    //SAÍDA
+    alert(`porcentagem: ${quant * 100 / 10} \nnúmeros:${lista}`)
+
+    /*
     let NomeDoNOme =[]
     let omagarrr=0
     //PROCESSAMENTO
@@ -21,5 +36,6 @@
     
     //SAÍDA
     alert(`porcentagem: ${omagarrr*100/10} \nnúmeros:${NomeDoNOme}`)
+    */
 
 </script>
